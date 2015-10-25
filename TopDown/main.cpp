@@ -1,9 +1,11 @@
+#include <time.h>
 #include <SFML/Graphics.hpp>
 #include "game.hpp"
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(1280, 768), "TopDown");
+	srand(time(NULL));
+	sf::RenderWindow window(sf::VideoMode(1280, 720), "TopDown");
 	Game game(window);
 
 	while (window.isOpen())
